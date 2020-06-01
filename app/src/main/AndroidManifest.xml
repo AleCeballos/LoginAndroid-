@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".Inicio"></activity>
+        <activity android:name=".Inicio" />
+        <activity android:name=".CrearNota" />
+        <activity android:name=".ListadoNotas" />
+        <activity android:name=".Modificar" />
+        <activity android:name=".Alarma"></activity>
     </application>
 
 </manifest>
