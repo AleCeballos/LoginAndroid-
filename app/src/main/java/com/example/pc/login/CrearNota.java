@@ -18,7 +18,7 @@ import java.util.Date;
 public class CrearNota extends AppCompatActivity {
 
 
-    Button buttonGuardarNota,buttonAgregarImagen;
+    Button buttonGuardarNota;
     EditText campoTitulo,campoContenido;
 
 

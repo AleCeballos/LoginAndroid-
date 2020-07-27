@@ -89,6 +89,17 @@ public class BaseHelper extends SQLiteOpenHelper{
            return true;
     }
 
+    //Chequeo si existe un usuario
+    public boolean unicousuario(){
+        SQLiteDatabase db =this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select * from usuarios ",null);
+        if(cursor.getCount()>0)
+            return true;
+        else
+            return false;
+    }
+
+
     // chequeo el email y el password
 
     public boolean ckemailpass (String email, String password){

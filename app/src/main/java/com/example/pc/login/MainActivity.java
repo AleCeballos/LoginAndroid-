@@ -47,6 +47,13 @@ public class MainActivity extends AppCompatActivity  {
               String PasswordReg = campoPassword.getText().toString();
               String RepassReg = campoRepassword.getText().toString();
 
+
+
+              Boolean unicousuario = db.unicousuario();
+              if(unicousuario==true){
+                  Toast.makeText(getApplicationContext(),"ya existe un usuario",Toast.LENGTH_SHORT).show();
+              }else{
+
               if(EmailReg.equals("")||PasswordReg.equals("")||RepassReg.equals("")){
                   Toast.makeText(getApplicationContext(),"Los campos estan vacios",Toast.LENGTH_SHORT).show();
               }else {
@@ -66,9 +73,9 @@ public class MainActivity extends AppCompatActivity  {
 
                       }
                   }
-                  Toast.makeText(getApplicationContext(),"Las contraseñas no cohinciden",Toast.LENGTH_SHORT).show();
+                  //Toast.makeText(getApplicationContext(),"Las contraseñas no cohinciden",Toast.LENGTH_SHORT).show();
               }
-          }
+          }}
       });
 
 

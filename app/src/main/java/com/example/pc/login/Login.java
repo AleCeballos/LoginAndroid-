@@ -13,6 +13,7 @@ public class Login extends AppCompatActivity {
 
     EditText campoEmailLogin,campoPasswordLogin;
     Button buttonLoguearme;
+    Button buttonVolver;
     BaseHelper db;
 
     @Override
@@ -24,6 +25,17 @@ public class Login extends AppCompatActivity {
         campoEmailLogin = (EditText)findViewById(R.id.campoEmailLogin);
         campoPasswordLogin = (EditText)findViewById(R.id.campoPasswordLogin);
         buttonLoguearme = (Button)findViewById(R.id.buttonLoguearme);
+        buttonVolver = (Button)findViewById(R.id.buttonVolver);
+
+        buttonVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i =new Intent(Login.this,MainActivity.class);
+                startActivity(i);
+
+            }
+        });
 
         buttonLoguearme.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +50,9 @@ public class Login extends AppCompatActivity {
                    else{
                     Toast.makeText(getApplicationContext(),"ERROR EN EMAIL O PASSWORD",Toast.LENGTH_SHORT).show();
                 }
+
+
+
             }
         });
 

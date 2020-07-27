@@ -107,7 +107,7 @@ public class ListadoNotas extends AppCompatActivity {
     public void CargarSegundoListado(){
 
         segundoListado = db.segundoListado();
-        ArrayAdapter<String> adapter =new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,segundoListado);
+        ArrayAdapter<String> adapter =new ArrayAdapter<String>(this,R.layout.list_item_mostrar,segundoListado);
         listView.setAdapter(adapter);
 
     }
