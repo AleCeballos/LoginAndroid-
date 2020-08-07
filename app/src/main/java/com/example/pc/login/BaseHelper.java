@@ -57,36 +57,14 @@ public class BaseHelper extends SQLiteOpenHelper{
     }
 
 
-    //Insertando NOTA en base de datos
-
-    public boolean insertarNota (String titulo, String contenido){
-
-        //fecha
-        String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
-
-        SQLiteDatabase db =this.getWritableDatabase();
-        ContentValues valores = new ContentValues();
-        valores.put("titulo",titulo);
-        valores.put("contenido",contenido);
-        valores.put("fecha",date);
-
-        long ins = db.insert("notas",null,valores);
-        if(ins==-1)
-            return false;
-        else
-            return true;
-    }
-
-
-
     //Chequeo si el email existe
     public boolean ckemail(String email){
         SQLiteDatabase db =this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select * from usuarios where email=?", new String[]{email});
-       if(cursor.getCount()>0)
-           return false;
-       else
-           return true;
+        if(cursor.getCount()>0)
+            return false;
+        else
+            return true;
     }
 
     //Chequeo si existe un usuario
@@ -113,17 +91,43 @@ public class BaseHelper extends SQLiteOpenHelper{
 
 
 
-//Cargo todo el listado
+    //Insertando NOTA en base de datos
+
+    public boolean insertarNota (String titulo, String contenido){
+
+        //fecha
+        String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+
+        SQLiteDatabase db =this.getWritableDatabase();
+        ContentValues valores = new ContentValues();
+        valores.put("titulo",titulo);
+        valores.put("contenido",contenido);
+        valores.put("fecha",date);
+
+        long ins = db.insert("notas",null,valores);
+        if(ins==-1)
+            return false;
+        else
+            return true;
+    }
+
+
+
+
+
+
+
+// Cargo completo  el listado
    public ArrayList<String> Listado(){
 
         ArrayList<String> datos = new ArrayList<String>();
 
         SQLiteDatabase db = this.getReadableDatabase();
-        String sql = "select Id,Titulo, Contenido from notas";
+        String sql = "select Id,Titulo,Contenido from notas";
         Cursor c = db.rawQuery(sql,null);
         if(c.moveToFirst()){
             do{
-                String linea = c.getInt(0) +" "+c.getString(1)+" "+c.getString(2);
+                String linea = c.getInt(0)+" "+c.getString(1)+" "+c.getString(2);
                 datos.add(linea);
             }while(c.moveToNext());
         }
@@ -139,12 +143,12 @@ public class BaseHelper extends SQLiteOpenHelper{
         ArrayList<String> datos = new ArrayList<String>();
 
         SQLiteDatabase db = this.getReadableDatabase();
-        String sql = "select Id,Titulo, Contenido,fecha from notas";
+        String sql = "select Id,Titulo,Contenido,fecha from notas";
         Cursor c = db.rawQuery(sql,null);
         if(c.moveToFirst()){
             do{
 
-                String linea = c.getInt(0) +" "+c.getString(1)+"\n   Fecha de Edicion: "+c.getString(3);
+                String linea = c.getInt(0)+" "+c.getString(1)+" "+c.getString(3);
                 datos.add(linea);
             }while(c.moveToNext());
         }

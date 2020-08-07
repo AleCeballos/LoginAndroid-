@@ -10,6 +10,7 @@ import android.widget.EditText;
 public class Modificar extends AppCompatActivity {
 
     EditText campoEditarTitulo,campoEditarContenido;
+
      Button buttonGuardarEdicion,buttonEliminarNota;
     BaseHelper db;
 

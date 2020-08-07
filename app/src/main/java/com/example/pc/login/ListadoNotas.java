@@ -52,11 +52,12 @@ public class ListadoNotas extends AppCompatActivity {
                 //Toast.makeText(ListadoNotas.this,listado.get(position),Toast.LENGTH_SHORT).show();
 
                 //Indico caracter que separa
-                int clave = Integer.parseInt(listado.get(position).split(" ")[0]);
+                int clave = Integer.parseInt(listado.get(position ).split(" ")[0]);
+                String titulo=segundoListado.get(position).split(" ")[1]; //segundoListado
+               // String contenido=listado.get(position).split(" ")[2];
+                String contenido=listado.get(position).split(" ")[2];
 
                 //ahora me voy a llevar los datos a modificar
-                String titulo=segundoListado.get(position).split(" ")[1];
-                String contenido=listado.get(position).split(" ")[2];
                 Intent intent = new Intent(ListadoNotas.this,Modificar.class);
                 intent.putExtra("Id",clave);
                 intent.putExtra("Titulo",titulo);
@@ -100,7 +101,7 @@ public class ListadoNotas extends AppCompatActivity {
 
         listado = db.Listado();
         ArrayAdapter<String> adapter =new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,listado);
-       // listView.setAdapter(adapter);
+        listView.setAdapter(adapter);
 
     }
 

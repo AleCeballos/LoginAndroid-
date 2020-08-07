@@ -27,6 +27,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Título"
+                    android:fontFamily="@font/fuente_uno"
                     android:textSize="20sp"/>
 
                 <EditText
@@ -51,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="Nuevo Evento"
+                    android:fontFamily="@font/fuente_uno"
                     android:textColor="#33F"
                     android:textSize="25sp"
 
@@ -69,6 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Descripción"
+                    android:fontFamily="@font/fuente_uno"
                     android:textSize="20sp"/>
 
                 <EditText
@@ -94,6 +97,7 @@
                     android:layout_width="136dp"
                     android:layout_height="wrap_content"
                     android:text="Localización"
+                    android:fontFamily="@font/fuente_uno"
                     android:textSize="20sp"/>
 
                 <EditText
@@ -118,6 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/fuente_uno"
                     android:text="Año"
                     android:textSize="20sp" />
 
@@ -127,8 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="number"
-                    />
+                    android:inputType="number" />
             </LinearLayout>
 
             <LinearLayout
@@ -143,7 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-
+                    android:fontFamily="@font/fuente_uno"
                     android:text="Mes"
                     android:textSize="20sp" />
 
@@ -166,6 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Dia"
+                    android:fontFamily="@font/fuente_uno"
                     android:textSize="20sp" />
 
                 <EditText
@@ -189,7 +194,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:text="Todo el dia" />
+                    android:text="Todo el dia"
+                    android:fontFamily="@font/fuente_uno"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -202,6 +209,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:text="Hora"
+                    android:fontFamily="@font/fuente_uno"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -223,6 +231,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:text="Minuto"
+                    android:fontFamily="@font/fuente_uno"
                     android:textSize="20sp"
                     />
 
@@ -243,13 +252,16 @@
 
                 <Button
                     android:id="@+id/btnAnadir"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="185dp"
+                    android:layout_height="53dp"
                     android:layout_margin="30dp"
                     android:layout_weight="1"
                     android:onClick="Agregar"
                     android:text="Añadir Evento"
-
+                    android:background="@drawable/ovalo"
+                    android:textSize="27sp"
+                    android:fontFamily="@font/fuente_uno"
+                    android:textColor="@color/colorWhite"
                     />
 
             </LinearLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@drawable/cajafuerte"
     tools:context=".Inicio">
 
@@ -12,10 +13,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Menu Principal"
-        android:textSize="24sp"
+        android:textSize="27sp"
         android:textColor="@color/colorWhite"
+
         tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:fontFamily="@font/fuente_uno"
+        />
 
     <TextView
         android:id="@+id/textView3"
@@ -26,12 +30,15 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Notas bajo contraseña"
+        android:textSize="27sp"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.127"
+        android:fontFamily="@font/fuente_uno"
+        />
 
     <Button
         android:id="@+id/buttonCrearNota"
@@ -43,13 +50,17 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/ovalo"
         android:text="Crear nota"
+        android:textSize="27sp"
+        android:fontFamily="@font/fuente_uno"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
+        app:layout_constraintVertical_bias="0.235"
+
+        />
 
     <Button
         android:id="@+id/buttonVerNotas"
@@ -61,6 +72,8 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/ovalo"
         android:text="Ver notas"
+        android:textSize="27sp"
+        android:fontFamily="@font/fuente_uno"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +91,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Recordatorio Nuevo"
+        android:fontFamily="@font/fuente_uno"
         android:textColor="@color/colorWhite"
+        android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.086"
@@ -97,6 +112,8 @@
         android:background="@drawable/ovalo"
         android:text="Crear recordatorio"
         android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        android:fontFamily="@font/fuente_uno"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
